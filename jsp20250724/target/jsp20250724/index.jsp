@@ -58,13 +58,18 @@
             <div class="col-1 col-md-3">
                 <div class="card" >
                     <div class="card-body">
-                        <%!    // 宣告一個成員變數，所有請求都會共享它    
+                        <%!    
+                        // 宣告一個成員變數，所有請求都會共享它    
                         private int pageCounter = 0;    
                         // 宣告一個自訂函數    
                         public String sayHello(String name) {        
-                            return "Hello, " + name + "!";    }%>
-                            <h2>宣告的使用</h2>
-                        <%    pageCounter++; // 每次刷新頁面，計數器都會增加%><p>這個頁面被訪問了 <%= pageCounter %> 次。</p>
+                            return "Hello, " + name + "!";    
+                        }
+                        %>
+                        <h2>宣告的使用</h2>
+                        <%    pageCounter++; // 每次刷新頁面，計數器都會增加
+                        %>
+                        <p>這個頁面被訪問了 <%= pageCounter %> 次。</p>
                         <p>呼叫自訂函數：<%= sayHello("Gemini") %></p>
                     </div>
                 </div>
